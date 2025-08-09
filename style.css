@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+}
+
+.card {
+  width: 90%;
+  max-width: 470px;
+  background: rgba(255, 255, 255, 0.1);
+  /* backdrop-filter: blur(10px); */
+  color: #fff;
+  margin: 60px auto 0;
+  border-radius: 24px;
+  padding: 35px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search input {
+  border: 0;
+  outline: 0;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 15px 25px;
+  height: 60px;
+  border-radius: 30px;
+  flex: 1;
+  margin-right: 16px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.search input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search input:focus {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.search button {
+  border: 0;
+  outline: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.search button img {
+  width: 18px;
+  filter: brightness(0) invert(1);
+}
+
+.weather-icon {
+  width: 150px;
+  margin-top: 20px;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+}
+
+.weather h1 {
+  font-size: 72px;
+  font-weight: 600;
+  margin: 10px 0;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.weather h2 {
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  margin-top: 40px;
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 16px;
+  width: 48%;
+  transition: all 0.3s ease;
+}
+
+.col:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+.col img {
+  width: 36px;
+  margin-right: 12px;
+  filter: brightness(0) invert(1);
+}
+
+.humidtiy, .wind {
+  font-size: 24px;
+  margin-top: -4px;
+  font-weight: 500;
+}
+
+.col p:last-child {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.weather {
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.search-instruction {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
